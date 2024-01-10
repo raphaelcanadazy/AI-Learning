@@ -8,7 +8,8 @@
 比如：喂给花的图片去识别玫瑰和向日葵
 
 #### 监督学习(UL, Unsupervised Learning)是ML的子集
-机器学习会接受有标签的训练数据
+机器学习会接受有标签的训练数据，标签就是期望的输出值，即包括有输入的特征，也包含期望的输出值，算法的目标是学习输入和输出之间的映射关系
+
 #### 无监督学习(SL, Supervised Learning)是ML的子集
 #### 强化学习(RL, Reinforcement Learning)是ML的子集
 
