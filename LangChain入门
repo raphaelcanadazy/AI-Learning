@@ -5,5 +5,12 @@ Document文档：加载器读到数据后，转换成Document对象，后续才�
 Text Spltters：文本分割，因为prompt发给openAI api或者embedding是字符有限制
 Vectorstores向量数据库： 因为数据搜索是向量运算，需要将Document进行向量化，才能进行向量运算搜索
 Chain链：一个Chain就是一个任务，任务链
-Agent代理：
+Agent代理：见示意图
+Embedding：用于衡量文本的相关性。相比fine-tuning最大的优势是不用进行训练，并且可以实时添加新的内容，而不用加一次新的内容就训练一次，并且各方面成本要比fine-tuning低很多。
 
+LangChain介绍
+框架
+LangChain库：Python库和JavaScript库。包含各种组件的接口和集成，一个基本的运行时，用于将这些组件组合成链和代理，以及现成的链和代理的实现。
+LangChain模板：一系列易于部署的参考架构，用于各种任务。
+LangServe：一个用于将LangChain链部署为REST API的库
+LangSmith：一个开发者平台，可以让你调试、测试、评估和监控基于任何LLM框架构建的链
