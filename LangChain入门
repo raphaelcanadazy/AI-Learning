@@ -11,6 +11,7 @@ Embedding：用于衡量文本的相关性。相比fine-tuning最大的优势是
 LangChain介绍
 框架
 LangChain库：Python库和JavaScript库。包含各种组件的接口和集成，一个基本的运行时，用于将这些组件组合成链和代理，以及现成的链和代理的实现。
+由langchain-core, langchain-community和langchain包构成
 LangChain模板：一系列易于部署的参考架构，用于各种任务。
 LangServe：一个用于将LangChain链部署为REST API的库
 LangSmith：一个开发者平台，可以让你调试、测试、评估和监控基于任何LLM框架构建的链
