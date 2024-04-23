@@ -1,0 +1,9 @@
+LangChain 入门
+
+Loader加载器：从指定源加载数据
+Document文档：加载器读到数据后，转换成Document对象，后续才能使用
+Text Spltters：文本分割，因为prompt发给openAI api或者embedding是字符有限制
+Vectorstores向量数据库： 因为数据搜索是向量运算，需要将Document进行向量化，才能进行向量运算搜索
+Chain链：一个Chain就是一个任务，任务链
+Agent代理：
+
