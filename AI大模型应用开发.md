@@ -10,5 +10,21 @@ pip install OpenAI
 import tiktoken
 encoding = tiktoken.encoding_for_model("gpt-3.5-turbo")
 encoding
-
+- <Encoding 'cl100k_base'>
 encoding.encode("黄河之水天上来")
+- [30868, 226, 31106, 111, 55030, 53610, 36827, 17905, 37507]
+len(encoding.encode("黄河之水天上来"))
+- 9
+
+max_token
+temperature [0 - 2]，值越大随机性越大
+frequency_penalty [-2 - 2]，影响的是生成文本里词重复出现的频率，值越大生成越多样性，一般设置0 - 1之间
+presence-penalty [-2 - 2]，影响的是生成内容是否包含更多的新词
+
+### 提示词工程
+1.使用最新的模型
+2.把指令放在提示的开头，并且用###或"""来分隔指令和上下文
+3.尽可能对上下文和输出的长度、格式、风格等给出具体、描述性、详细的要求
+- 以{某著名诗人}的风格，写一首关于Open AI的鼓舞人心的短诗，主题要集中在最近推出的DALL-E产品上（DALL-E是一种根据文本生成图形的机器学习模型）
+4.通过一些例子来阐明想要的输出格式
+- 提取
