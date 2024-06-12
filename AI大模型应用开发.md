@@ -63,10 +63,10 @@ presence-penalty [-2 - 2]，影响的是生成内容是否包含更多的新词
 
 关键词2：
 
-### 6.减少空洞和不严谨的描述
+#### 6.减少空洞和不严谨的描述
 用3到5句话来组成一个段落来描述此产品
 
-### 7.与其告诉不应该做什么，不如告知应该做什么
+#### 7.与其告诉不应该做什么，不如告知应该做什么
 以下是客服与客人之间的对话。客服将尝试了解问题并提出解决方案，同时避免询问任何隐私相关的问题。不要询问用户名或密码等隐私，而是让用户参阅帮助文章
 
 www.samplewebsite.com/help/faq
@@ -91,3 +91,26 @@ response = client.chat.completions.create(
 )
 
 ##### 思维链：提供给AI解题步骤和示例，或者懒人方法"let's think step by step","让我们来分步骤思考"
+
+#### API用法实例
+from openai import OpenAI
+
+clent = OpenAI()
+
+def get_openai_response(client, system_prompt, user_prompt, model="gpt-3.5-turbo"):
+
+  response = client.chat.completion.create(
+    
+    model=model,
+
+    messages=[
+
+      {"role": "system", "content": system_prompt},
+
+      {"role": "user", "content": user_prompt}
+    
+    ],
+    
+  )
+
+  return response.choices[0].message.content
