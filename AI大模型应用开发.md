@@ -2,23 +2,34 @@
 
 ### 安装OpenAI库
 pip install OpenAI
+
 !pip install OpenAI
 
 ### 将API-KEY加入环境变量
 
 ### 安装tiktoken，统计编码token数
 import tiktoken
+
 encoding = tiktoken.encoding_for_model("gpt-3.5-turbo")
+
 encoding
+
 <Encoding 'cl100k_base'>
+
 encoding.encode("黄河之水天上来")
+
 [30868, 226, 31106, 111, 55030, 53610, 36827, 17905, 37507]
+
 len(encoding.encode("黄河之水天上来"))
+
 9
 
 max_token
+
 temperature [0 - 2]，值越大随机性越大
+
 frequency_penalty [-2 - 2]，影响的是生成文本里词重复出现的频率，值越大生成越多样性，一般设置0 - 1之间
+
 presence-penalty [-2 - 2]，影响的是生成内容是否包含更多的新词
 
 ### 提示词工程
@@ -28,15 +39,27 @@ presence-penalty [-2 - 2]，影响的是生成内容是否包含更多的新词
 以{某著名诗人}的风格，写一首关于Open AI的鼓舞人心的短诗，主题要集中在最近推出的DALL-E产品上（DALL-E是一种根据文本生成图形的机器学习模型）
 #### 4.通过一些例子来阐明想要的输出格式
 提取下面文本中提到的重要实体。首先提取所有公司名称，然后提取所有人名，然后提取适合内容的特定主题，最后提取一般总体主题
+
 所需格式:
+
 公司名称: <逗号分隔公司名称列表>
+
 人名: -||-
+
 特定主题: -||-
+
 一般主题: -||-
+
 文本: {文本内容}
+
 #### 5.先从零样本提示开始，效果不好，则用小样本提示
 从下面相应的文本中提取关键词。
+
 文本1：Stripe提供API，WEB开发人员可以使用这些API将支付处理集成到他们的网站和移动应用程序中。
+
 关键词1：Stripe、支付处理、API、Web开发人员、网站、移动应用程序
+
 文本2：{text}
+
 关键词2：
+
