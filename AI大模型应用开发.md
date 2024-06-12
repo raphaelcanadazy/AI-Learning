@@ -74,3 +74,12 @@ www.samplewebsite.com/help/faq
 客户：我无法登录我的账户。
 
 客服：
+
+#### 给AI的理想示范：
+response = client.chat.completions.create(
+  model="gpt-3.5-turbo",
+  messages=[
+    {"role": "user", "content": "格式化以下信息： \n姓名 -> 张三\n年龄 -> 27\n客户ID -> 001"},
+    {"role": "assistant", "content": "##客户信息\n- 客户姓名: 张三\n- 客户年龄：27岁\n- 客户ID：001"}
+  ]
+)
