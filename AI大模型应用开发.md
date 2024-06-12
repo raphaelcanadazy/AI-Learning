@@ -89,3 +89,5 @@ response = client.chat.completions.create(
   ]
   
 )
+
+##### 思维链：提供给AI解题步骤和示例，或者懒人方法"let's think step by step","让我们来分步骤思考"
