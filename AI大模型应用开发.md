@@ -129,5 +129,20 @@ LangChain是一个用于支持AI大模型应用开发的框架，不仅是调用
 
 Agent代表一个大模型的，能执行一系列动作的智能体；它的核心理念是利用AI模型的能力进行推理；根据任务，动态评估和确定行动路径。
 
+#### LangChain Model I/O
+主要有两种模型，LLM语言模型和Chat Model聊天模型。LLM模型接收一个字符串，返回一个字符串。Chat Model接收一个消息列表作为输入，返回一个消息列表输出，gpt-3.5这些都属于Chat Model模型。
 
+#### 安装LangChain库
+!pip install langchain_openai
 
+pip install langchain_openai
+
+from langchain_openai import ChatOpenAI
+
+model = ChatOpenAI(model = "gpt-3.5-turbo")
+
+有3种消息类型，SystemMessage对AI系统的指令, HumanMessage, AIMessage表示来自AI的系统消息
+
+from langchain.schema.messages import (SystemMessage, HumanMessage)
+
+system_message = SystemMessage(content="请你作为我的物理课助教，用通俗易懂的语言解释物理概念。")
