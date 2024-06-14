@@ -115,5 +115,8 @@ def get_openai_response(client, system_prompt, user_prompt, model="gpt-3.5-turbo
 
   return response.choices[0].message.content
 #### LangChain
-
+LangChain是一个用于支持AI大模型应用开发的框架，不仅是调用模型API，而且还可以感知模型连接外部数据，并且借助外部工具与环境进行互动，来生成更好的回答。
+提供的组件，包括：模型（Model），提示模板，文件加载器，记忆（Memory），检索器（Retriever），agent和链（Chain）
+模型提供语言理解和生成能力，是AI应用的核心，它们可以是来自各种AI服务提供方的模型；
+记忆用来存储和管理对话历史或相关的上下文信息
 
