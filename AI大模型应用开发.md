@@ -145,4 +145,18 @@ model = ChatOpenAI(model = "gpt-3.5-turbo")
 
 from langchain.schema.messages import (SystemMessage, HumanMessage)
 
+messages = [
+
 system_message = SystemMessage(content="请你作为我的物理课助教，用通俗易懂的语言解释物理概念。")
+
+human = HumanMessage(content="什么是波粒二象性")
+
+]
+
+response = model.invoke(messages)
+
+// chat_models.baidu_qianfan_endpoint.QianfanChatEndpoint 百度千帆平台模型
+
+// chat_models.hunyuan.ChatHunyuan 腾讯混元模型
+
+// chat_models.tongyi.ChatTongyi 阿里通义千问模型
